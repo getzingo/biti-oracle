@@ -10,5 +10,5 @@ if ! [ -d "venv" ]; then
 fi
 
 export SDL_VIDEODRIVER=kmsdrm
-source sensor_env/bin/activate
+source venv/bin/activate
 python3 kleines_projekt_demo.py
