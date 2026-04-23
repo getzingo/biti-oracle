@@ -11,4 +11,4 @@ fi
 
 export SDL_VIDEODRIVER=kmsdrm
 source sensor_env/bin/activate
-python3 demo.py
+python3 kleines_projekt_demo.py

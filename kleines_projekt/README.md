@@ -62,6 +62,12 @@ apt install python3-pygame libegl1 libegl-mesa0 libgles2
 # Deswegen in venv/bin/activate richtigen Treiber einfügen
 echo 'export SDL_VIDEODRIVER=kmsdrm' >> venv/bin/activate
 ```
+
+Weiters muss man die Virtuelle Umgebung dann mit OS Package Referenz kreieren: 
+```shell
+python3 -m venv venv --system-site-packages
+```
+
 Es kann sein, dass man sich das alles mit der default Desktop Umgebung ersparen würde, es hat mich aber eh nur 3 Stunden gekostet.
 
 ## Installation
@@ -97,10 +103,10 @@ Dann dieses Repo klonen und den Projektordner wechseln. Anschliessend virtuelle 
 
 ```shell
 git clone https://github.com/getzingo/biti-oracle
-cd kleines_projekt
+cd biti-oracle/kleines_projekt
 
 # Venv initialisieren
-python3 -m venv venv
+python3 -m venv venv --system-site-packages
 # DSM workaround
 echo 'export SDL_VIDEODRIVER=kmsdrm' >> venv/bin/activate
 source venv/bin/activate
@@ -125,6 +131,6 @@ Es gibt auch ein Shell-Script um nicht diesen ganzen Prozess durchführen zu mü
 ./run-demo.sh
 
 # Oder mit aktiver venv
-python kleines_projekt.py
+python kleines_projekt_demo.py
 ```
 
