@@ -36,7 +36,7 @@ Die erste Fehlerquelle war, dass ich das Package `pygame` mit pip in einer Virtu
 
 
 `python3-pygame` und pip package `pygame` haben dieselbe Version schlussendlich:
-```shell
+```bash
 apt policy python3-pygame
 # python3-pygame:
 #   Installed: 2.6.1-1+b2
@@ -55,7 +55,7 @@ pip3 index versions pygame
 
 Leider hat das pip package keine richtige Implementierung um den Kernel Mode-Setting Direct Rendering Manager (KMSDRM) mit dem Wayland Video Treiber zu verwenden, pygame wollte immer auf X11 zurückgreifen ([Quelle](https://forums.raspberrypi.com/viewtopic.php?t=367519 )). Deswegen über den OS Package Manager mit den Dependencies für das SDL Backend.
 
-```shell
+```bash
 pip3 uninstall pygame
 apt install python3-pygame libegl1 libegl-mesa0 libgles2
 
@@ -64,7 +64,7 @@ echo 'export SDL_VIDEODRIVER=kmsdrm' >> venv/bin/activate
 ```
 
 Weiters muss man die Virtuelle Umgebung dann mit OS Package Referenz kreieren: 
-```shell
+```bash
 python3 -m venv venv --system-site-packages
 ```
 
@@ -74,7 +74,7 @@ Es kann sein, dass man sich das alles mit der default Desktop Umgebung ersparen 
 
 Voraussetzung ist ein funktionierender RPi, gearbeitet wurde unter dem OS `Raspberry Pi OS Lite`, der auf Debian 13 (trixie) basiert.
 
-```shell
+```bash
 sudo apt-get update
 sudo apt-get install -y \
   python3-dev \
@@ -94,7 +94,7 @@ sudo apt-get install -y \
 
 Der aktuelle User **muss** in den Gruppen `video, render, input, gpio, i2c, spi` sein:
 
-```shell
+```bash
 USER=$(whoami)
 sudo usermod -aG video,render,input,gpio,i2c,spi $USER
 ```
@@ -116,7 +116,7 @@ Dann sollte in der Shell immer `venv` voranstehen, um zu signalisieren, dass die
 
 Um alle Python Module zu installieren, das bereitgestellte File `requirements.txt` verwenden:
 
-```shell
+```bash
 pip3 install -r requirements.txt
 
 # Zur Sicherheit nochmal pygame deinstallieren
@@ -127,7 +127,7 @@ pip3 uninstall pygame
 
 Es gibt auch ein Shell-Script um nicht diesen ganzen Prozess durchführen zu müssen:
 
-```shell
+```bash
 ./run-demo.sh
 
 # Oder mit aktiver venv
