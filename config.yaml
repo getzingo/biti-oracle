@@ -1,0 +1,37 @@
+pygame-config:
+  SCREEN_WIDTH: 1280
+  SCREEN_HEIGHT: 720
+  FPS: 30
+  FULLSCREEN: 1
+
+COLORS:
+  bg_dark: [ 26, 10, 46 ]
+  bg_mid: [ 45, 27, 105 ]
+  bg_orange: [ 122, 72, 7 ]
+  purple: [ 123, 45, 139 ]
+  magenta: [ 180, 60, 180 ]
+  cyan: [ 0, 240, 255 ]
+  gold: [ 255, 215, 0 ]
+  white: [ 255, 255, 255 ]
+  star: [ 200, 180, 255 ]
+  orb_core: [ 140, 80, 220 ]
+  orb_glow: [ 100, 40, 180 ]
+  orb_highlight: [ 220, 200, 255 ]
+  eye_white: [ 200, 180, 240 ]
+  eye_iris: [ 80, 0, 160 ]
+  eye_pupil: [ 20, 0, 40 ]
+
+SENSING_MESSAGES:
+  - "Just a moment"
+  - "You again?"
+  - "Hmmmm"
+  - "Omg, what's going on here?!"
+  - "Honestly, I've seen worse"
+  - "Hmmm, very interesting!"
+  - "Wow, spiritually valuable!"
+  - "Just a little patience"
+  - "A bad omen?"
+  - "Listening to the beyond"
+  - "I've been waiting for you"
+  - "Well... it could be worse!"
+  - "Lorem ipsum dolor sit amet"

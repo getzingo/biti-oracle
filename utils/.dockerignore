@@ -1,0 +1,14 @@
+tests/
+.gitignore
+env
+main.py
+utils/oracle_helpers/oracle_menu.py
+*.ttf
+README.md
+screen_drawers.py
+text_simulator.py
+tmp.py
+storage/
+__pycache__/
+kleines_projekt
+Dockerfile

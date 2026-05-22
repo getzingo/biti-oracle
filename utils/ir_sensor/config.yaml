@@ -1,0 +1,22 @@
+# IR Sensor calibration constants
+# Seeed Studio Grove Infrared Temperature Sensor v1.2
+
+# ADC reference voltage (INTERNAL on ATmega328P)
+vref: "1.1"
+adc_max: "1023.0"
+
+# Thermopile zero reference voltage (calibrated for ATmega168 Nano clone, 2026-05-21)
+# Raw A6 ~450 at 24.5°C room → V ≈ 0.484V → zero point set to match
+reference_vol: "0.472"
+# Calibration offset (adjust per-sensor)
+offset_vol: "0.014"
+# Temperature step for object temp table
+temp_range: "10.0"
+
+# Room temperature for initial calibration (°C)
+room_temp_c: 24.5
+
+# Calibration values for this specific sensor + Arduino combo
+# (determined 2026-05-21 on ATmega168 Nano clone at 24.5°C room temp)
+# - temp_calibration (ambient offset): -2.6°C (NTC self-heating, set in IRSensor() init)
+# - reference_vol + offset_vol: 0.514V zero-point (default OEM; works with ambient interpolation)
