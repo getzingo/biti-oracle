@@ -46,7 +46,7 @@ flowchart TB
 
 | Komponente | Details |
 |---|---|
-| Raspberry Pi 5 | Hauptrechner, GPIO, USB-Host |
+| Raspberry Pi 4 | Hauptrechner, GPIO, USB-Host |
 | HDMI Display | Vollbild-GUI |
 | HC-SR04 | Ultraschall-Distanzsensor (Hand-Erkennung) |
 | Seeed Studio Grove IR Sensor v1.2 | Infrarot-Temperatursensor |
